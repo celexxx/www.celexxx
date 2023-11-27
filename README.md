@@ -1,2 +1,2 @@
-# www.celexxx.com
+# https://celexxx.github.io/Avatar
 ns
