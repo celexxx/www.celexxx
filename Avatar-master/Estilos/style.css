@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background-color: #0765d1;
+  }
+  
+  /* Configuración del menu de navergación */
+  .menu_url {
+    margin-top: 0;
+    margin-left: 0;
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    /* Quitamos menú al pasar al modo vista de celular */
+    transform: translateY(-100%);
+    transition: 0.3s ease;
+  }
+  
+  .item {
+    /* 1---> 16px */
+    /* Separamos el texto */
+    padding: 0.5em;
+  }
+  
+  .item:hover {
+    background-color: #416bc5;
+    border-radius: 10px;
+    padding: 5px;
+  }
+  
+  .link_url {
+    color: #0e2436;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  .link_url:hover {
+    color: #ffffff;
+  }
+  
+  /* ICONO */
+  .menu_icono {
+    width: 45px;
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  /* Quitar el desbordamiento de la imagen */
+  img {
+    max-width: 100%;
+  }
+  
+  /* la clase de java */
+  .Rocio {
+    transform: translateY(0);
+  }
+  
+  .carousel-inner img {
+    height: 75vh;
+    background-repeat: no-repeat;
+    /* Que la imagen no se repita */
+    background-size: cover;
+    /* tamaño grande sin estirar */
+    background-position: center center;
+    /* centrar epicamente */
+  }
+  
+  .contenedor_info {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+    padding: 52px 0;
+  }
+  
+  .sobre_hp {
+    text-align: center;
+    font-size: 56px;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+  
+  .titulo {
+    font-size: 24px;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  
+  .info .boton {
+    display: flex;
+    justify-content: center;
+    padding: 6px;
+    width: 350px;
+    border: 1px solid rgba(24, 16, 16, 0.7);
+    color: rgb(24, 16, 16);
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 16px;
+    margin-top: 24px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .info .boton:hover {
+    border: 2px dotted #0e1a40;
+  }
+  
+  /* Sector galería */
+  .galeria {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+  }
+  
+  .imagen {
+    width: 20%;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .imagen img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .arriba {
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-style: solid;
+    border-width: 19vh 50vw;
+    border-color: #0765d1 transparent transparent transparent;
+  }
+  
+  .abajo {
+    z-index: 2;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-style: solid;
+    border-width: 19vh 50vw;
+    border-color: transparent transparent #0765d1 transparent;
+  }
+  
+  /* Sector de Media Query */
+  @media screen and (min-width: 768px) {
+    .menu_url {
+      flex-direction: row;
+      justify-content: center;
+      padding: 0.5em;
+      transform: translateY(0);
+    }
+  
+    .menu_icono {
+      display: none;
+    }
+  
+    .link_url {
+      padding: 1em;
+    }
+  }
